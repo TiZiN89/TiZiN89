@@ -19,10 +19,10 @@ res_id int (4) AUTO INCREMENT,
 time int (4) NOT NULL,
 res_teacher varchar (50),
 res_room int (4) NOT NULL,
-res_groop int (4) NOT NULL,
+res_group int (4) NOT NULL,
 PRIMARY KEY (res_id),
-ALTERNATE KEYS (time, res_room)
+UNIQUE (time, res_room)
 FOREIGN KEY (res_teacher) REFERENCES teacher (teacher_id),
 FOREIGN KEY (res_room) REFERENCES room (room_id),
-FOREIGN KEY (res_group) REFERENCES student_group (groop_id)
+FOREIGN KEY (res_group) REFERENCES student_group (group_number)
 );
